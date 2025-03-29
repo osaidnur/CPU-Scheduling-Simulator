@@ -51,11 +51,7 @@ To prevent starvation, this method gradually increases the priority of waiting p
 
 ## 🖼️ Sample Output
 
-**Simulation Result 1:**
-
 ![Result 1](res1.jpg)
-
-**Simulation Result 2:**
 
 ![Result 2](res2.png)
 
