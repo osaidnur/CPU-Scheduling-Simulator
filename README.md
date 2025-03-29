@@ -13,7 +13,7 @@ This project is a **C++-based simulator** for evaluating various **CPU schedulin
   - [5. Priority Scheduling (Preemptive)](#5-priority-scheduling-preemptive)
   - [6. Priority Scheduling (Non-Preemptive)](#6-priority-scheduling-non-preemptive)
   - [7. Non-Preemptive Priority with Aging](#7-non-preemptive-priority-with-aging)
-- [Sample Output](#sample-output)
+- [Sample Output](#-sample-output)
 - [Files Included](#-files-included)
 - [How to Run](#️-how-to-run)
 
