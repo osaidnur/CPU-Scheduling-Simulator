@@ -57,7 +57,7 @@ To prevent starvation, this method gradually increases the priority of waiting p
 
 **Simulation Result 2:**
 
-![Result 2](res2.bmp)
+![Result 2](res2.png)
 
 ## 📂 Files Included
 
