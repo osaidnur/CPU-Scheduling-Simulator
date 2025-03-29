@@ -71,3 +71,17 @@ To prevent starvation, this method gradually increases the priority of waiting p
    ```bash
    ./cpu_scheduler
    ```
+### ✏️ Customize Process Data
+
+You can **modify the list of processes** in the `main()` function of the source file by changing the contents of the `vector<Process>`.
+
+Each process is defined with the following parameters:
+
+```cpp
+{ id, arrivalTime, burstTime, remainingTime, priority, readyQueueArrival }
+```
+
+Feel free to input your own data to simulate different CPU scheduling scenarios.
+
+
+   
