@@ -48,7 +48,7 @@ Like the preemptive version, but the currently running process can't be interrup
 ### 7. Non-Preemptive Priority with Aging
 To prevent starvation, this method gradually increases the priority of waiting processes ("aging"). Ensures fairness in long-run scheduling.
 
-## 🔥 Sample Output
+## 📟 Sample Output
 
 ![Result 1](res1.jpg)
 
