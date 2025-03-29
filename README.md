@@ -16,7 +16,6 @@ This project is a **C++-based simulator** for evaluating various **CPU schedulin
 - [Sample Output](#-sample-output)
 - [Files Included](#-files-included)
 - [How to Run](#️-how-to-run)
-- [Author](#-author)
 
 ## 📌 Features
 
@@ -59,7 +58,7 @@ To prevent starvation, this method gradually increases the priority of waiting p
 
 - `Task2_OsaidNur_1210733.cpp` — Main simulation source code.
 - `Project 2.pdf` — Project description and requirements.
-- `res1.jpg`, `res2.bmp` — Visual results from simulations.
+- `res1.jpg`, `res2.png` — Visual results from simulations.
 
 ## 🛠️ How to Run
 
@@ -72,8 +71,3 @@ To prevent starvation, this method gradually increases the priority of waiting p
    ```bash
    ./cpu_scheduler
    ```
-
-## 🧑‍💻 Author
-
-**Osaid Hasan Nur**  
-Student ID: 1210733
