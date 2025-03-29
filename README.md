@@ -1,84 +1,83 @@
 # CPU Scheduling Simulator
 
-This project is a simulator for various CPU scheduling algorithms, implemented in C++. It allows you to visualize and understand how different scheduling algorithms manage process execution in a CPU.
+This project is a **C++-based simulator** for evaluating various **CPU scheduling algorithms**, which are fundamental in operating system design. It demonstrates how different strategies affect the turnaround and waiting times for processes.
 
-## Table of Contents
+## 📚 Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Algorithms Implemented](#algorithms-implemented)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Features](#-features)
+- [Scheduling Algorithms](#️-scheduling-algorithms)
+  - [1. First Come First Served (FCFS)](#1-first-come-first-served-fcfs)
+  - [2. Shortest Job First (SJF)](#2-shortest-job-first-sjf)
+  - [3. Shortest Remaining Time First (SRTF)](#3-shortest-remaining-time-first-srtf)
+  - [4. Round Robin (RR)](#4-round-robin-rr)
+  - [5. Priority Scheduling (Preemptive)](#5-priority-scheduling-preemptive)
+  - [6. Priority Scheduling (Non-Preemptive)](#6-priority-scheduling-non-preemptive)
+  - [7. Non-Preemptive Priority with Aging](#7-non-preemptive-priority-with-aging)
+- [Sample Output](#-sample-output)
+- [Files Included](#-files-included)
+- [How to Run](#️-how-to-run)
+- [Author](#-author)
 
-## Introduction
+## 📌 Features
 
-CPU scheduling is a fundamental aspect of operating systems that determines which processes run at any given time. This simulator provides a hands-on way to explore and compare different scheduling strategies. It is particularly useful for students and professionals who want to understand the intricacies of CPU scheduling.
+- Simulates multiple CPU scheduling algorithms
+- Calculates:
+  - Waiting Time
+  - Turnaround Time
+  - Average metrics for all processes
 
-## Features
+## ⚙️ Scheduling Algorithms
 
-- **Multiple Scheduling Algorithms:** The simulator includes a variety of common CPU scheduling algorithms.
-- **Process Visualization:** Visualize how processes are scheduled over time.
-- **Customizable Inputs:** Input your own set of processes and burst times to see how they are handled by different algorithms.
-- **Performance Metrics:** Calculate and display metrics such as average waiting time and turnaround time.
+### 1. First Come First Served (FCFS)
+Processes are scheduled in the order of their arrival. It's simple but may cause the "convoy effect" where short tasks wait behind long ones.
 
-## Algorithms Implemented
+### 2. Shortest Job First (SJF)
+Selects the process with the shortest burst time. This non-preemptive strategy minimizes average waiting time but may cause starvation of longer processes.
 
-The following CPU scheduling algorithms are implemented in this simulator:
+### 3. Shortest Remaining Time First (SRTF)
+Preemptive version of SJF. Always executes the process with the least remaining burst time. More efficient but requires frequent context switching.
 
-1. **First-Come, First-Served (FCFS):**
-   - Non-preemptive scheduling algorithm.
-   - Processes are executed in the order they arrive.
+### 4. Round Robin (RR)
+Each process gets a fixed time slot (quantum). After the quantum, the process is moved to the end of the queue. It's fair and responsive but not always optimal for CPU utilization.
 
-2. **Shortest Job Next (SJN) / Shortest Job First (SJF):**
-   - Non-preemptive scheduling algorithm.
-   - The process with the shortest burst time is executed next.
+### 5. Priority Scheduling (Preemptive)
+Processes are assigned priorities. The CPU is allocated to the process with the highest priority. Preemptive nature ensures high-priority tasks interrupt lower ones.
 
-3. **Priority Scheduling:**
-   - Can be preemptive or non-preemptive.
-   - Processes are executed based on priority. Higher priority processes are executed first.
+### 6. Priority Scheduling (Non-Preemptive)
+Like the preemptive version, but the currently running process can't be interrupted. Prioritizes simplicity over responsiveness.
 
-4. **Round Robin (RR):**
-   - Preemptive scheduling algorithm.
-   - Each process is given a fixed time slice (quantum) in a cyclic order.
+### 7. Non-Preemptive Priority with Aging
+To prevent starvation, this method gradually increases the priority of waiting processes ("aging"). Ensures fairness in long-run scheduling.
 
-5. **Shortest Remaining Time (SRT):**
-   - Preemptive version of SJF.
-   - The process with the shortest remaining burst time is executed next.
+## 🖼️ Sample Output
 
-6. **Multilevel Queue Scheduling:**
-   - Processes are divided into multiple queues based on priority.
-   - Each queue may have its own scheduling algorithm.
+**Simulation Result 1:**
 
-7. **Multilevel Feedback Queue Scheduling:**
-   - Similar to multilevel queue scheduling but allows processes to move between queues based on their behavior and aging.
+![Result 1](res1.jpg)
 
-## Installation
+**Simulation Result 2:**
 
-To run the CPU Scheduling Simulator, you need to have a C++ compiler installed on your machine. Follow these steps to set up the project:
+![Result 2](res2.bmp)
 
-1. Clone the repository:
+## 📂 Files Included
+
+- `Task2_OsaidNur_1210733.cpp` — Main simulation source code.
+- `Project 2.pdf` — Project description and requirements.
+- `res1.jpg`, `res2.bmp` — Visual results from simulations.
+
+## 🛠️ How to Run
+
+1. Make sure you have a C++ compiler installed (e.g., g++).
+2. Compile the code:
    ```bash
-   git clone https://github.com/osaidnur/CPU-Scheduling-Simulator.git
-   cd CPU-Scheduling-Simulator
-    ```
-2. Compile the Code:
-    ```bash
-    g++ -o cpu_scheduler main.cpp scheduler.cpp
-3. Run the simulator:
-```bash
-./cpu_scheduler 
-```
+   g++ Task2_OsaidNur_1210733.cpp -o cpu_scheduler
+   ```
+3. Run the executable:
+   ```bash
+   ./cpu_scheduler
+   ```
 
-## Usage
+## 🧑‍💻 Author
 
-Once the simulator is running, you can input your own set of processes. Follow the prompts to enter process details such as arrival time, burst time, and priority. The simulator will then display the scheduling results for the selected algorithm.
-
-Example input:
-```
-Enter the number of processes: 3
-Enter the details for process 1 (arrival time, burst time, priority): 0 5 2
-Enter the details for process 2 (arrival time, burst time, priority): 1 3 1
-Enter the details for process 3 (arrival time, burst time, priority): 2 8 3
-```
-The simulator will output the scheduling order, waiting times, turnaround times, and other relevant metrics.
-
+**Osaid Hasan Nur**  
+Student ID: 1210733
